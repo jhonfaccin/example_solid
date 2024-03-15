@@ -14,6 +14,7 @@ export default abstract class AbstractShareButton {
 
     abstract createLink() : string
 
+    // Template Method
     bind (){
         const link = this.createLink();
         this.eventHandler.addEventListenerToClass(this.clazz,"click", () => window.open(link));
